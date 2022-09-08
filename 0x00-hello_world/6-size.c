@@ -1,8 +1,8 @@
-#include <stdio.h>
+#include<stdio.h>
 
-/**
+ /**
  * main - prints the phrase "Programming is like building a multilingual puzzle
- * Return: 0 if the exited properly, non-zero otherwise
+ * Return: always and sucessful with 0
  */
 int main (void)
 {
