@@ -1,21 +1,16 @@
-#iclude "main.h"
-
+#include "main.h"
 /**
  * print_line - printing lines
  * @n: number of time
  *
- * Return: void
+ * Return: Always 0
  */
-
-
-
 void print_line(int n)
 {
-	int i;
-
-	for (i = 0; i < n; i++)
+	while (n > 0)
 	{
-		for (i = 0; i < n; i++)
+		_putchar('_');
+		n--;
 	}
 	_putchar('\n');
 }
