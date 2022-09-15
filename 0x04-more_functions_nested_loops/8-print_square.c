@@ -1,31 +1,31 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * main - FizzBuzz
+ * print_square - entry point
  *
- * Description: prints the numbers 1 - 100 w/
- * and FizzBuzz for multiples of both
- *
- * Return: always 0
+ * Description: Prints square
+ * @size: size of square
+ * Return: void
  */
-int main(void)
-{
-	int i;
 
-	for (i = 1; 1<= 100; i++)
+void print_square(int size)
+{
+	int row, column;
+
+	if (size <= 0)
 	{
-		if (i % 15 == 0)
-			printf("FizzBuzz");
-		else if (i % 3 == 0)
-			printf("Fizz");
-		else if (i % 5 == 0)
-			printf("Buzz");
-		else
-			printf("%i", i);
-		if (i < 100)
-			printf(" ");
+		_putchar('\n');
 	}
-	printf("\n");
-	return (0);
+	else
+	{
+		for (row = 1; row <= size; row++)
+		{
+			for (column = 1; column <= size; column++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
 }
+
