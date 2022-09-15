@@ -1,26 +1,23 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
- * more_numbers - nmbr fct
- *
- * Return: no return
+ * more_numbers - checks for checks a digit (0 through 9).
+ * Return: Always 0
  */
-
 void more_numbers(void)
 {
-	int n1, n2;
+	int a, b;
 
-	for (n1 = 0; n1 < 10; n1++)
+	for (a = 0; a < 10; a++)
 	{
-		for (n2 = 0; n2 < 14; n2++)
+		for (b = 0; b < 14; b++)
 		{
-			if (n2 > 9)
+			if (b / 10 !=0)
 			{	
-				_putchar((n2 /10) + '0');
+				_putchar(b /10 + '0');
 			}
-			_putchar((n2 % 10) + '0');
+			_putchar(b % 10 + '0');
 		}
-		_putchar(10);
+		_putchar('\n');
 	}
 }
+
