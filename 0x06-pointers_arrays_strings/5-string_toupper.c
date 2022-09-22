@@ -1,7 +1,10 @@
 #include "main.h"
+
 /**
- * string_toupper - a function that changes all lower of a st * @n: input string
- * Return: capitialized string
+ * string_toupper - lower to upper
+ * @n: pointer to char params
+ * 
+ * Return: *n
  */
 char *string_toupper(char *n)
 {
@@ -10,8 +13,7 @@ char *string_toupper(char *n)
 	for (i = 0; n[i] != '\0'; i++)
 	{
 		if (n[i] >= 'a' && n[i] <= 'z')
-			n[i] = n[i] - 32;
+			n[i] -= 32;
 	}
-
 	return (n);
 }
