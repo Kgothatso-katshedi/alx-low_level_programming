@@ -1,29 +1,26 @@
 #include "main.h"
 
 /**
- * leet - encodes a string into 1337
- * @s: input string. like this
- * Return: the pointer to dest.
+ * leet - encode
+ * @n: pointer to char params
+ * Return: *n
  */
+
 char *leet(char *n)
 {
-	int count = 0, i;
-	int low_letters[] = {97, 101, 111, 116, 108};
-	int upp_letters[] = {65, 69, 79, 84, 76};
-	int numbers[] = {52, 51, 48, 55, 49};
+	int i;
+	int j;
+	char l[] = "ol_ea__t";
 
-	while (*(n + count) != '\0')
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		for (i = 0; i < 5; i++)
+		for (j = 0; l[j] != '\0'; j++)
 		{
-			if (*(n + count) == low_letters[i] || 				*(n + count) == upp_letters[i])
-			{
-				*(n + count) = numbers[i];
-				break;
-			}
+		if (n[i] == l[j] || n[i] == (l[j] - 32))
+		{
+			n[i] = j + '0';
 		}
-		count++;
+		}
 	}
-
 	return (n);
-}
+
