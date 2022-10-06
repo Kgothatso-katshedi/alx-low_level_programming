@@ -8,18 +8,16 @@
  * @height: int type
  * Return: clean up memory
  */
-
 void free_grid(int **grid, int height)
 {
-	int y;
+	int i;
 
-	if (grid == NULL || grid == 0)
+	if (grid != NULL || height != 0)
 	{
-		return;
+		for (i = 0; i < height; i++)
+		{
+			free(grid[i]);
+		}
+		free(grid);
 	}
-	for (y = 0; y < height;  y++)
-	{
-		free(grid[y]);
-	}
-	free(grid);
 }
