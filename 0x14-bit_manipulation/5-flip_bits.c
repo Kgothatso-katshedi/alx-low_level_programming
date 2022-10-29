@@ -1,8 +1,8 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
  * flip_bits - ...
+ * need to flip to get from one number to another
  *  @n: ...
  *  @m: ...
  *
@@ -10,16 +10,13 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int mask = 0, count = 0;
+	unsigned int nbits;
 
-	mask = n ^ m;
-	while (mask)
+	for (nbits = 0; n || m; n >>= 1, m >>= 1)
 	{
-		if (mask & 1)
-		    count++;
-
-		mask >>= 1;
+		if ((n & 1) != (m & 1))
+			nbits++;
 	}
 
-	return (count);
-}	
+	return (nbits);
+}
