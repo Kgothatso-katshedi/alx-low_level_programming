@@ -1,17 +1,3 @@
-
-
-86% of storage used … You can clean up space or get more storage for Drive, Gmail, and Google Photos.
-
-/*
-
- * File: 100-elf_header.c
-
- * Auth: Brennan D Baraban
-
- */
-
-
-
 #include <elf.h>
 
 #include <sys/types.h>
